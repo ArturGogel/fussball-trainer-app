@@ -30,3 +30,17 @@ if not df.empty:
             st.link_button(f"An Team senden", link)
 else:
     st.write("Noch keine Übungen in der Datenbank.")
+
+
+st.divider()
+st.subheader("🤝 Werde Teil der Community")
+
+with st.form("community_input"):
+    name = st.text_input("Dein Name / Verein")
+    idee = st.text_area("Welche Übung fehlt dir? Oder teile einen Tipp:")
+    submit = st.form_submit_button("Vorschlag einsenden")
+    
+    if submit:
+        # Hier speichern wir es für den Anfang einfach in einer Liste oder zeigen es an
+        st.success(f"Danke {name}! Dein Vorschlag wurde an die 'Taktikkabine' gesendet.")
+        # Später: Hier wird der Input in eine Datenbank geschrieben
