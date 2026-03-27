@@ -90,4 +90,8 @@ with st.container():
     col_a, col_b = st.columns([2, 1])
     with col_a:
         st.subheader("Fehlt dir eine Übung?")
-        wunsch = st.text_input("
+       wunsch = st.text_input("Welches Thema brauchst du als nächstes?", placeholder="z.B. Kopfballspiel U13")
+    with col_b:
+        st.write("###") # Abstandhalter
+        if st.button("Anfrage senden"):
+            st.toast("Wunsch wurde gespeichert! ⭐")
