@@ -10,7 +10,7 @@ st.set_page_config(page_title="CoachFlow | Taktikkabine", page_icon="⚽", layou
 st.markdown("""
     <style>
     .main { background-color: #f0f2f6; }
-    .stExpander { border: 1px solid #d1d5db; border-radius: 12px; background-color: white !important; margin-bottom: 10px; }
+    .stExpander { border: 1px solid #d1d5db; border-radius: 12px; background-color: black !important; margin-bottom: 10px; }
     .stButton>button { border-radius: 8px; font-weight: bold; background-color: #007bff; color: white; }
     </style>
     """, unsafe_allow_html=True)
