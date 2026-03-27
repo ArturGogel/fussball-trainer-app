@@ -54,9 +54,12 @@ if not df.empty:
             with st.container():
                 with st.expander(f"**{row['titel']}**", expanded=False):
                     # Bild-Anzeige
-                    if pd.notnull(row['bild']) and row['bild'] != "":
-                        if os.path.exists(row['bild']):
-                            st.image(row['bild'], use_container_width=True)
+                    # --- SICHERE BILD-ANZEIGE ---
+                    if 'bild' in row and pd.notnull(row['bild']) and row['bild'] != "":
+                    if os.path.exists(row['bild']):
+                    st.image(row['bild'], use_container_width=True)
+                    else:
+                    st.info(f"📸 Skizze folgt in Kürze für: {row['titel']}")
                     
                     st.markdown(f"**Anforderung:** {row['inhalt']}")
                     st.success(f"**Coach-Voice:** {row['coaching']}")
